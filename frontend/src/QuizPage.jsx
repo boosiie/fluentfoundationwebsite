@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './HomePage.css';
+import './QuizPage.css';
 
 function QuizPage() {
   const [questions, setQuestions] = useState([]);
@@ -15,9 +15,26 @@ function QuizPage() {
       .catch(() => setQuestions([]));
   }, []);
 
+  // if we've completed the quiz show summary first so `q` is never accessed out of bounds
+  if (finished) {
+    return (
+      <div className="page quiz-summary">
+        <h2>Quiz complete</h2>
+        <p>Your score: {score} / {questions.length}</p>
+        <button className="restart" onClick={() => {
+          setIndex(0);
+          setScore(0);
+          setSelected(null);
+          setFinished(false);
+        }}>Take again</button>
+      </div>
+    );
+  }
+
   if (questions.length === 0) return <div className="page">No quiz questions available.</div>;
 
   const q = questions[index];
+  const isLast = index === questions.length - 1;
 
   function choose(i) {
     if (selected !== null) return;
@@ -26,38 +43,35 @@ function QuizPage() {
   }
 
   function next() {
-    const nextIndex = index + 1;
-    if (nextIndex >= questions.length) {
-      setFinished(true);
-    } else {
-      setIndex(nextIndex);
+    if (selected === null) return; // guard just in case
+    if (!isLast) {
+      setIndex(i => i + 1);
       setSelected(null);
+    } else {
+      setFinished(true);
     }
-  }
-
-  if (finished) {
-    return (
-      <div className="page">
-        <h2>Quiz complete</h2>
-        <p>Your score: {score} / {questions.length}</p>
-      </div>
-    );
   }
 
   return (
     <div className="page">
-      <h2>Quiz</h2>
+      <h2>Quiz ({index + 1} / {questions.length})</h2>
       <div className="quiz-card">
-        <p>{q.question}</p>
+        <p className="question-text">{q.question}</p>
         <div className="options">
           {q.options.map((opt, i) => (
-            <button key={i} className={`option ${selected===i? 'selected':''}`} onClick={() => choose(i)}>
+            <button
+              key={i}
+              className={`option ${selected===i? 'selected':''}`}
+              onClick={() => choose(i)}
+            >
               {opt}
             </button>
           ))}
         </div>
-        <div style={{marginTop:12}}>
-          <button onClick={next} disabled={selected===null}>Next</button>
+        <div className="controls">
+          <button onClick={next} disabled={selected===null} className="next">
+            {isLast ? 'Finish' : 'Next'}
+          </button>
         </div>
       </div>
     </div>

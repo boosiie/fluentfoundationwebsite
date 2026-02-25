@@ -14,48 +14,8 @@
   "options" : [ "3", "4", "5" ],
   "correctIndex" : 1
 }, {
-  "id" : "f335d4d2-bfbe-4078-8222-29c540fd9149",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
-}, {
-  "id" : "f8b10db2-ab6f-4fd6-b2b3-0fb05b8de383",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
-}, {
-  "id" : "160d6a05-ddc5-4b6d-98ff-54a95c98ac3b",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
-}, {
-  "id" : "ae8ad47b-db1e-4ae9-b31c-967b0ccb4889",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
-}, {
-  "id" : "3adc004d-8ae9-4a49-b730-4527833f60cc",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
-}, {
-  "id" : "7400c055-f8e2-4eb7-9591-5a298ae355a3",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
-}, {
-  "id" : "2d5824f6-54a0-4e53-919e-4c4d49077f78",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
-}, {
-  "id" : "65db4435-de9c-4311-af45-91c9b1729864",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
-}, {
-  "id" : "565f5aed-3f1a-4b36-b911-23335e90c5e5",
-  "question" : "What is 2+2?",
-  "options" : [ "3", "4", "5" ],
-  "correctIndex" : 1
+  "id" : "c066f6f2-64d0-48b0-b095-90478b40919c",
+  "question" : "Is Vuk samming Sam?",
+  "options" : [ "Yes", "No" ],
+  "correctIndex" : 0
 } ]
