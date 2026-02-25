@@ -57,11 +57,7 @@ public class MemberService {
      * UTILITY: Bulk creates sample data if the database is empty.
      */
     public void initializeSampleData() {
-        if (memberRepository.count() == 0) {
-            saveMember(new FoundationMember("John", "Doe", "john.doe@example.com", "Admin"));
-            saveMember(new FoundationMember("Jane", "Smith", "jane.smith@example.com", "Editor"));
-            System.out.println("Sample data initialized.");
-        }
+        // No longer seeding default members now that user accounts are managed separately.
     }
 
     /**

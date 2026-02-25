@@ -1,9 +1,5 @@
 package org.fluentfoundation.backend.repository;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.fluentfoundation.backend.model.QuizQuestion;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,7 +7,13 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import org.fluentfoundation.backend.model.QuizQuestion;
+import org.springframework.stereotype.Repository;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Repository
 public class QuizRepository {
     private final ObjectMapper mapper = new ObjectMapper();
     private final Path filePath;
