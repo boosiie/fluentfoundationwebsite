@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import useAuth from './hooks/useAuth.js';
+import useAuth from '../hooks/useAuth.js';
 
 const initialState = { email: '', password: '' };
 

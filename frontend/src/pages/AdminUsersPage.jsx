@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import useAuth from '../hooks/useAuth.js';
-import './AdminUsersPage.css';
+import '../css/AdminUsersPage.css';
 
 const roleOptions = ['ADMIN', 'CONTRIBUTOR', 'MEMBER'];
 
