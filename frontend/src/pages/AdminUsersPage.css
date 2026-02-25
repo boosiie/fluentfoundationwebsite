@@ -1,0 +1,133 @@
+.admin-users {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-users__intro {
+  margin: 0;
+  color: #4a5a6a;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.admin-users__search {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-users__search label {
+  font-weight: 600;
+  color: #1f2933;
+}
+
+.admin-users__search input {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-users__search input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+.admin-users__table-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.admin-users__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.admin-users__table thead {
+  background: #f1f5f9;
+}
+
+.admin-users__table th,
+.admin-users__table td {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 0.95rem;
+}
+
+.admin-users__table tbody tr:nth-child(even) {
+  background: rgba(241, 245, 249, 0.45);
+}
+
+.admin-users__table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.admin-users__table select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+  background: #ffffff;
+}
+
+.admin-users__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-users__actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #0f172a;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.admin-users__actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.admin-users__actions button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(14, 165, 233, 0.3);
+}
+
+.admin-users__loading,
+.admin-users__empty,
+.admin-users__error {
+  padding: 24px;
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.admin-users__error {
+  color: #d7263d;
+}
+
+@media (max-width: 768px) {
+  .admin-users__table {
+    min-width: unset;
+  }
+
+  .admin-users__table th,
+  .admin-users__table td {
+    padding: 12px 16px;
+  }
+}
